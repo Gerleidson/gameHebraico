@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jogo Hebraico</title>
-
+  <link href="/img/favicon.ico" rel="icon" sizes="any">
+  <link href="/img/icon.png" rel="apple-touch-icon">
   <!-- Link para o Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -13,13 +14,15 @@
 <body class="bg-dark text-white">
   <div class="container d-flex justify-content-center align-items-center min-vh-100">
     <div class="card bg-dark text-white shadow-lg border-0 rounded-4 p-4" style="width: 100%; max-width: 400px;">
+      <!-- logo do jogo -->
+      <img src="img/icon.png" alt="icon" class="img-fluid" style="max-width: 180px;">
       <h1 class="text-center mb-4">Jogo Hebraico</h1>
       <p class="text-center mb-4">Selecione um nível para começar o jogo:</p>
       <div class="d-grid gap-3">
         <button class="btn btn-primary btn-lg" onclick="setLevel('basico')">Básico</button>
         <button class="btn btn-warning btn-lg" onclick="setLevel('intermediario')">Intermediário</button>
         <button class="btn btn-success btn-lg" onclick="setLevel('avancado')">Avançado</button>
-        <button class="btn btn-danger btn-lg" onclick="exitGame()">Sair</button>
+        <button class="btn btn-danger btn-lg" onclick="exitGame()">Sair do jogo</button>
       </div>
     </div>
   </div>
@@ -30,12 +33,20 @@
       <div class="modal-content bg-dark text-white">
         <div class="modal-header">
           <h5 class="modal-title" id="questionModalLabel">Pergunta</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
         </div>
         <div class="modal-body">
+          <!-- Exibe a pergunta -->
           <p id="questionText" class="question"></p>
+
+          <!-- Exibe a imagem associada à pergunta -->
           <div id="questionImage" class="image-container text-center mb-3"></div>
+
+          <!-- Exibe as opções de resposta -->
           <div id="questionOptions" class="options d-grid gap-2"></div>
+
+          <!-- Exibe a pontuação atual -->
+          <p id="scoreText" class="score text-center mt-3">Pontuação: 0</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
