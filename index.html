@@ -1,20 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jogo do Alfabeto Hebraico</title>
-  <link rel="stylesheet" href="css/style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Hebraico!</title>
+    <!-- Adicionando o Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-  <h1>Jogo do Alfabeto Hebraico</h1>
-  <div id="game">
-    <p class="question">Bem-vindo ao jogo! Clique para começar.</p>
-    <div class="options">
-      <button class="option" onclick="startGame()">Iniciar</button>
+<body class="bg-dark text-white">
+    <!-- Container principal -->
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="row w-100 justify-content-center text-center">
+            <!-- Título -->
+            <div class="col-12">
+                <h1 class="text-white mb-4">Bem-vindo ao Game Hebraico!</h1>
+            </div>
+
+            <!-- Conteúdo -->
+            <div class="col-md-8 col-lg-6">
+                <div class="row">
+                    <!-- Texto de boas-vindas -->
+                    <div class="col-12 mb-4">
+                        <p class="text-white lead">Este é um jogo emocionante onde você pode testar suas habilidades e desafios. Prepare-se para se divertir e se surpreender!</p>
+                        <p class="text-white">Para jogar, você precisa criar uma conta. Faça o cadastro abaixo e depois faça login para começar sua aventura.</p>
+                    </div>
+
+                    <!-- Formulário de Login -->
+                    <div class="col-12">
+                        <div class="card bg-dark bg-opacity-50 border-0 rounded-4 p-4 shadow-lg">
+                            <form id="loginForm">
+                                <h3 class="text-white mb-4">Login</h3>
+                                <div class="mb-3">
+                                    <input type="text" id="loginUsername" class="form-control" placeholder="Usuário" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="password" id="loginPassword" class="form-control" placeholder="Senha" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 py-2 mb-3">Entrar</button>
+                                <p class="text-white">Não tem uma conta? <a href="cadastro.html" class="text-decoration-none text-primary">Cadastre-se aqui!</a></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <script src="game.js"></script>
+
+    <!-- Scripts do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="auth.js"></script>
 </body>
 </html>
